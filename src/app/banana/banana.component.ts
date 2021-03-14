@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
 import {select, Store} from "@ngrx/store";
 import {AppState, getMyBanana} from "../app.state";
-import {GetNewBanana} from "./state";
+import {GetNewBanana, PeelBanana} from "./state";
 
 @Component({
     selector: 'app-banana',
@@ -29,7 +29,7 @@ export class BananaComponent implements OnInit {
     }
 
     peelBanana() {
-
+      this.store.dispatch(new PeelBanana(null));
     }
 
     eatBanana() {

@@ -11,6 +11,7 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import { BananaComponent } from './banana/banana.component';
+import {APP_BASE_HREF} from "@angular/common";
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { BananaComponent } from './banana/banana.component';
     AppComponent,
     BananaComponent
   ],
+  providers: [{provide: APP_BASE_HREF, useValue: ''}],
   bootstrap: [
     AppComponent
   ]
